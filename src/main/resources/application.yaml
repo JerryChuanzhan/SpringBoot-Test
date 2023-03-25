@@ -1,0 +1,40 @@
+server:
+  port: 8081
+
+
+#对空格的要求十分高！
+#注入到我们的配置类中！
+
+#普通的key-value
+name: zhangsan
+#对象
+student:
+  name: zhangsan
+  age: 20
+#  行内写法
+teacher: {name: lisi,age: 30}
+
+# 数组
+pets:
+  - cat
+  - dog
+  - pig
+#行内写法
+pet: [pet,dog,pig]
+
+
+
+# 测试实体类对象赋值
+person:
+  name: Jerry${random.uuid}
+  age: ${random.int}
+  happy: true
+  birth: 2023/3/24
+  maps: {k1: v1,k2: v2}
+  lists:
+    - code
+    - music
+    - sport
+  dog:
+    name: 幸运
+    age: 9
